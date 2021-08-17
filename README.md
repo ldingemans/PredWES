@@ -35,7 +35,7 @@ Finally, a final model is trained on the whole dataset and the model is exported
 
 <h2>Running all models</h2>
 
-It is possible as well to run the nested cross-validation procedure on all models described in the paper on another dataset as well. Again, one should add the data in a feather file with three columns: one column should contain the HPO terms (the IDs) in a list, the second column the HPO terms (the names) in a list, and the third column the corresponding WES result. An example dataset (which is randomly generated using the `generate_data()`function in the `evaluate_all_models.py file`) is provided to illustrate this.
+It is possible as well to run the nested cross-validation procedure on all models described in the paper on another dataset. Again, one should add the data in a feather file with three columns: one column should contain the HPO terms (the IDs) in a list, the second column the HPO terms (the names) in a list, and the third column the corresponding WES result. An example dataset (which is randomly generated using the `generate_data()`function in the `evaluate_all_models.py file`) is provided to illustrate this.
 
 Next, run `evaluate_all_models.py` after replacing the `random_generated_hpo_terms.ftr` file with a real dataset or replacing the path in `evaluate_all_models.py`. This will evaluate train not only the Finnish Horseshoe model, but all other models described in the paper as well on the data using the nested cross-validation approach. 
 
