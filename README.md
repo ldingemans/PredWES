@@ -6,7 +6,7 @@ With the scripts in this repository, it is possible to
 
 * Run the pretrained Finnish Horseshoe yourself
 * Retrain the Finnish Horseshoe model with your own data
-* Run all models described in the paper (SVM, MLP, De Vries Score, all three Bayesian logistic regression models and the Needell algorithm) to see which one performs best with your data
+* Run all models described in the paper (SVM, MLP, De Vries Score, all three Bayesian logistic regression models and the Needell algorithm) to see which one performs best with your data and generate all figures and tables as in the paper
 
 <h2>Prerequisites</h2>
 1) First install the needed dependencies using pip:
@@ -35,10 +35,9 @@ Finally, a final model is trained on the whole dataset and the model is exported
 
 <h2>Running all models</h2>
 
-It is possible as well to run the nested cross-validation procedure on all models described in the paper on another dataset as well. Again, one should add the data in a feather file with three columns: one column should contain the HPO terms (the IDs) in a list, the second column the HPO terms (the names) in a list, and the third column the corresponding WES result. An example dataset (which is randomly generated using the `generate_data()`function in the `train_eval_model.py file`) is provided to illustrate this.
+It is possible as well to run the nested cross-validation procedure on all models described in the paper on another dataset as well. Again, one should add the data in a feather file with three columns: one column should contain the HPO terms (the IDs) in a list, the second column the HPO terms (the names) in a list, and the third column the corresponding WES result. An example dataset (which is randomly generated using the `generate_data()`function in the `evaluate_all_models.py file`) is provided to illustrate this.
 
-Next, run `train_eval_model.py` after replacing the `random_generated_hpo_terms.ftr` file with a real dataset or replacing the path in `train_eval_model.py`. This will evaluate train not only the Finnish Horseshoe model, but all other models described in the paper as well on the data using the nested cross-validation approach. 
+Next, run `evaluate_all_models.py` after replacing the `random_generated_hpo_terms.ftr` file with a real dataset or replacing the path in `evaluate_all_models.py`. This will evaluate train not only the Finnish Horseshoe model, but all other models described in the paper as well on the data using the nested cross-validation approach. 
 
-A table is generated and exported in both latex and csv with the results - similar to table 2 in the paper, the provide an easy overview of the performance of the different classifiers.
-
-Functions to generate the other figures and tables are not included in this repository, since the original patient data can not be supplied - and therefore these cannot be exactly reproduced. Of course, these functions are available on request, if one desires.
+All tables, figures, supplemental tables and supplemental figures are then generated as in the paper. 
+Of course, the patient data used in the paper is not included, so when using the supplied (or your own) dataset, the resulting figures and tables will be different.
