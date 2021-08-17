@@ -1,9 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Fri Aug 13 10:07:07 2021
-
-@author: manz184215
-"""
 import numpy as np
 import pandas as pd
 from sklearn.metrics import brier_score_loss
