@@ -9,6 +9,7 @@ With the scripts in this repository, it is possible to
 * Run all models described in the paper (SVM, MLP, De Vries Score, all three Bayesian logistic regression models and the Needell algorithm) to see which one performs best with your data and generate all figures and tables as in the paper
 
 <h2>Prerequisites</h2>
+
 1) First install the needed dependencies using pip:
 
 ```
